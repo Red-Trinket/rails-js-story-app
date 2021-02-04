@@ -74,6 +74,27 @@ document.addEventListener("DOMContentLoaded", () => {
   
 
     // delete - delete a user
+
+    // let buttons = document.getElementsByClassName("delete-button")
+    // console.log(buttons)
+
+    // for (const button of buttons){
+    //     button.addEventListener("click", () => {
+    //         debugger;
+    //     })
+    // }
+
+    function deleteUser(){
+
+        let userID = parseInt(event.target.dataset.id)
+
+        fetch(`${BASE_URL}/users/${userID}`, {
+            method: 'DELETE'
+        })
+
+        setTimeout(() => {this.location.reload();}, 50)
+        
+    }
     //make commit
 
 

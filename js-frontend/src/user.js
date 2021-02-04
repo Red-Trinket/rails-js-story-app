@@ -18,7 +18,7 @@ class User {
                 Name: ${this.name} - Email: ${this.email}
             </li>
         </ul>
-        <button clas"delete-button" data-id=${this.id}>Delete User</button>
+        <button class="delete-button" data-id=${this.id} onclick="deleteUser()">Delete User</button>
         `
     }
 
